@@ -1,0 +1,79 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp8
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            var aracList = new List<arac>();
+            Console.WriteLine("Yapmak istediginiz islemi secin:  ");
+            Console.WriteLine("Arac eklemek icin 1, araclari listelemek icin 2...");
+            int islemTuru = Convert.ToInt32(Console.ReadLine());
+            if (islemTuru == 2)
+            {
+                foreach (var arac in aracList)
+                {
+                    Console.WriteLine(arac);
+                }
+
+                Console.WriteLine("incelemek icin arac kodu girin...");
+            }
+            if (islemTuru == 1)
+            {
+
+
+                Console.WriteLine("Arac adini girin..");
+                Console.WriteLine("Cikis icin cikis yaz...");
+
+                if (Console.ReadLine != "cikis")
+                {
+
+                    Console.WriteLine("arac kaydedin  ");
+
+                    Console.WriteLine("Arac kodu");
+                    new arac(Console.ReadLine());
+
+
+                    Console.WriteLine("Arac Kodu - Arac Rengi - Arac Fiyatı - Motor Gucu")
+                    Console.ReadLine = arac
+                    new arac(input);
+
+                }
+            }
+        }
+        class arac
+        {
+            string renk;
+            int motorGucu;
+            double fiyat;
+            int arabaKodu;
+            public string getArac()
+            {
+                return arabaKodu.ToString() + "  " + renk + "  " + fiyat.ToString();
+            }
+            public arac(string aracKodu, string aracRengi, string aracFiyat, double aracGucu)
+            {
+                arabaKodu = aracKodu;
+                renk = aracRengi;
+                motorGucu = aracGucu;
+                fiyat = aracFiyat;
+            }
+        }
+        class motor : arac
+        {
+            string motorTuru;
+
+
+        }
+        class araba : arac
+        {
+            int silindirSayisi;
+        }
+    }
+}
